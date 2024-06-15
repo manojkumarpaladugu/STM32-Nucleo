@@ -1,0 +1,3 @@
+[submodule "Modules/Hal"]
+	path = Modules/Hal
+	url = git@github.com:STMicroelectronics/stm32g4xx_hal_driver.git
