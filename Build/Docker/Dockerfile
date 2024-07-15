@@ -13,6 +13,7 @@ RUN apt-get install -y  \
     python3             \
     python3-pip         \
     pipx                \
+    git                 \
     gcc-arm-none-eabi
 
 # Install packages via pipx
