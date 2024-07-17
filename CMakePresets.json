@@ -7,21 +7,22 @@
             "generator": "Unix Makefiles",
             "binaryDir": "${sourceDir}/_out/${presetName}",
             "cacheVariables": {
-                "CONFIGURATION_PRESET_NAME": "${presetName}",
-                "CMAKE_BUILD_TYPE": "Debug"
+                "BOARD_NAME": "${presetName}",
+                "CMAKE_BUILD_TYPE": "Debug",
+                "LINKER_SCRIPT": "${sourceDir}/${presetName}/Startup/LinkerScript.ld"
             }
         },
         {
-            "name": "g491re",
+            "name": "G491RET6",
             "inherits": "stm32-nucleo-base",
             "toolchainFile": "${sourceDir}/Build/Toolchains/arm-m4-gcc-toolchain.cmake"
         }
     ],
     "buildPresets": [
         {
-            "name": "g491re",
-            "configurePreset": "g491re",
-            "targets": ["NucleoFw"]
+            "name": "G491RET6",
+            "configurePreset": "G491RET6",
+            "targets": ["NucleoFirmware"]
         }
     ]
 }

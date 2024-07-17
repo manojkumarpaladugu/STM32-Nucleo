@@ -1,4 +1,8 @@
 cmake_minimum_required(VERSION 3.29.5)
 
-add_library(${BOARD_NAME} STATIC)
+set(APPLICATION_NAME "NucleoFirmware")
+add_executable(${APPLICATION_NAME})
+set(CMAKE_EXECUTABLE_SUFFIX ".elf")
+
+add_subdirectory(Startup)
 add_subdirectory(Main)
