@@ -10,6 +10,7 @@ RUN apt-get update      && \
 
 # Install packages via apt
 RUN apt-get install -y  \
+    vim                 \
     python3             \
     python3-pip         \
     pipx                \
