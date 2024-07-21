@@ -15,7 +15,10 @@
         {
             "name": "G491RET6",
             "inherits": "stm32-nucleo-base",
-            "toolchainFile": "${sourceDir}/Build/Toolchains/arm-m4-gcc-toolchain.cmake"
+            "toolchainFile": "${sourceDir}/Build/Toolchains/arm-m4-gcc-toolchain.cmake",
+            "cacheVariables": {
+                "DEVICE": "STM32G491xx"
+            }
         }
     ],
     "buildPresets": [
