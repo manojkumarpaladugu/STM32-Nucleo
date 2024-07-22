@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.29.5)
+cmake_minimum_required(VERSION 3.28.1)
 
 target_include_directories(${EXECUTABLE_NAME} PUBLIC ${PROJECT_SOURCE_DIR}/Drivers/ST/Hal/G4/Inc
                                               ${PROJECT_SOURCE_DIR}/Drivers/ST/CMSIS/G4/Include

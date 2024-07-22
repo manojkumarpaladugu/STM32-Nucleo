@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.29.5)
+cmake_minimum_required(VERSION 3.28.1)
 
 set(DRIVERS_LIBRARY Drivers)
 add_library(${DRIVERS_LIBRARY} STATIC)

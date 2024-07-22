@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.29.5)
+cmake_minimum_required(VERSION 3.28.1)
 
 set(EXECUTABLE_NAME "NucleoFirmware")
 add_executable(${EXECUTABLE_NAME})
