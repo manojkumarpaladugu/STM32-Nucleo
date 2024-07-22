@@ -7,7 +7,6 @@
             "generator": "Unix Makefiles",
             "binaryDir": "${sourceDir}/_out/${presetName}",
             "cacheVariables": {
-                "BOARD_NAME": "${presetName}",
                 "CMAKE_BUILD_TYPE": "Debug",
                 "LINKER_SCRIPT": "${sourceDir}/${presetName}/Startup/LinkerScript.ld"
             }
@@ -17,6 +16,8 @@
             "inherits": "stm32-nucleo-base",
             "toolchainFile": "${sourceDir}/Build/Toolchains/arm-m4-gcc-toolchain.cmake",
             "cacheVariables": {
+                "DRIVERS_DIRECTORY": "G4",
+                "BOARD_DIRECTORY": "G491RET6",
                 "DEVICE": "STM32G491xx"
             }
         }
@@ -25,7 +26,7 @@
         {
             "name": "G491RET6",
             "configurePreset": "G491RET6",
-            "targets": ["NucleoFirmware"]
+            "targets": ["Drivers", "NucleoFirmware"]
         }
     ]
 }

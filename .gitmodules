@@ -1,9 +1,3 @@
-[submodule "Drivers/ARM/CMSIS/v5"]
-	path = Drivers/ARM/CMSIS/v5
-	url = git@github.com:ARM-software/CMSIS_5.git
-[submodule "Drivers/ST/Hal/G4"]
-	path = Drivers/ST/Hal/G4
+[submodule "Drivers/G4/Hal"]
+	path = Drivers/G4/Hal
 	url = git@github.com:STMicroelectronics/stm32g4xx_hal_driver.git
-[submodule "Drivers/ST/CMSIS/G4"]
-	path = Drivers/ST/CMSIS/G4
-	url = git@github.com:STMicroelectronics/cmsis_device_g4.git
