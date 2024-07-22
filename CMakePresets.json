@@ -18,7 +18,8 @@
             "cacheVariables": {
                 "DRIVERS_DIRECTORY": "G4",
                 "BOARD_DIRECTORY": "G491RET6",
-                "DEVICE": "STM32G491xx"
+                "DEVICE": "STM32G491xx",
+                "EXECUTABLE_NAME": "NucleoFirmware"
             }
         }
     ],
@@ -26,7 +27,7 @@
         {
             "name": "G491RET6",
             "configurePreset": "G491RET6",
-            "targets": ["Drivers", "NucleoFirmware"]
+            "targets": ["NucleoFirmware"]
         }
     ]
 }
