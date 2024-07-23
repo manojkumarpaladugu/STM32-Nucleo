@@ -3,5 +3,6 @@ project(NucleoFirmware VERSION 0.0.1)
 
 enable_language(C CXX ASM)
 
+add_subdirectory(Commons)
 add_subdirectory(Drivers)
 add_subdirectory(${BOARD_DIRECTORY})

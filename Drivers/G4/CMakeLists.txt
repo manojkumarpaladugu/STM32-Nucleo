@@ -1,9 +1,9 @@
 cmake_minimum_required(VERSION 3.28.1)
 
 target_include_directories(${DRIVERS_LIBRARY} INTERFACE ${CMAKE_CURRENT_SOURCE_DIR}/Hal/Inc
-                                                     ${CMAKE_CURRENT_SOURCE_DIR}/CMSIS/Device/ST/STM32G4xx/Include
-                                                     ${CMAKE_CURRENT_SOURCE_DIR}/CMSIS/Core/Include
-                                                     ${CMAKE_CURRENT_SOURCE_DIR}/Core/Include)
+                                                        ${CMAKE_CURRENT_SOURCE_DIR}/CMSIS/Device/ST/STM32G4xx/Include
+                                                        ${CMAKE_CURRENT_SOURCE_DIR}/CMSIS/Core/Include
+                                                        ${CMAKE_CURRENT_SOURCE_DIR}/Core/Include)
 
 target_sources(${DRIVERS_LIBRARY} INTERFACE ${CMAKE_CURRENT_SOURCE_DIR}/Core/Source/stm32g4xx_it.c
                                             ${CMAKE_CURRENT_SOURCE_DIR}/Core/Source/stm32g4xx_hal_msp.c

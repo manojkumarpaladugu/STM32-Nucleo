@@ -4,6 +4,6 @@ add_executable(${EXECUTABLE_NAME})
 set(CMAKE_EXECUTABLE_SUFFIX ".elf")
 
 add_subdirectory(Startup)
-add_subdirectory(Core)
+add_subdirectory(Main)
 
-target_link_libraries(${EXECUTABLE_NAME} Drivers)
+target_link_libraries(${EXECUTABLE_NAME} Commons Drivers)
