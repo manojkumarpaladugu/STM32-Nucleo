@@ -6,20 +6,17 @@
             "hidden": true,
             "generator": "Unix Makefiles",
             "binaryDir": "${sourceDir}/_out/${presetName}",
-            "toolchainFile": "${sourceDir}/Build/Toolchains/${presetName}/toolchain.cmake",
+            "toolchainFile": "${sourceDir}/Build/${presetName}/Toolchain.cmake",
             "cacheVariables": {
                 "CMAKE_BUILD_TYPE": "Debug",
-                "LINKER_SCRIPT": "${sourceDir}/${presetName}/Startup/LinkerScript.ld"
+                "LINKER_SCRIPT": "${sourceDir}/${presetName}/Main/Source/LinkerScript.ld"
             }
         },
         {
             "name": "G491RET6",
             "inherits": "stm32-nucleo-base",
             "cacheVariables": {
-                "DRIVERS_DIRECTORY": "G4",
-                "BOARD_DIRECTORY": "G491RET6",
-                "DEVICE": "STM32G491xx",
-                "EXECUTABLE_NAME": "NucleoFirmware"
+                "BOARD_DIRECTORY": "${presetName}"
             }
         }
     ],

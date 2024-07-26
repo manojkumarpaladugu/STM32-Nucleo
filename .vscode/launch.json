@@ -8,7 +8,7 @@
             "name": "Build & Debug Microcontroller - ST-Link",
             "cwd": "${workspaceFolder}",
             "type": "cortex-debug",
-            "executable": "C:\\Manoj\\Sources\\STM32-Nucleo\\_out\\G491RET6\\G491RET6\\NucleoFirmware.elf",
+            "executable": "${command:cmake.launchTargetPath}",
             // Let CMake extension decide executable: "${command:cmake.launchTargetPath}"
             // Or fixed file path: "${workspaceFolder}/path/to/filename.elf"
             "request": "launch",

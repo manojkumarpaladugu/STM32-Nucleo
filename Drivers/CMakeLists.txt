@@ -1,7 +1,6 @@
 cmake_minimum_required(VERSION 3.28.1)
 
 set(DRIVERS_LIBRARY Drivers)
-project(${DRIVERS_LIBRARY})
 add_library(${DRIVERS_LIBRARY} OBJECT)
 
 target_compile_definitions(${DRIVERS_LIBRARY} PUBLIC

@@ -17,6 +17,5 @@ target_sources(${DRIVERS_LIBRARY} PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/Hal/Src/st
                                           ${CMAKE_CURRENT_SOURCE_DIR}/Hal/Src/stm32g4xx_hal_dma.c
                                           ${CMAKE_CURRENT_SOURCE_DIR}/Hal/Src/stm32g4xx_hal_uart.c
                                           ${CMAKE_CURRENT_SOURCE_DIR}/Core/Source/Core.c
-                                          ${CMAKE_CURRENT_SOURCE_DIR}/Core/Source/stm32g4xx_it.c
                                           ${CMAKE_CURRENT_SOURCE_DIR}/Core/Source/stm32g4xx_hal_msp.c
                                           ${CMAKE_CURRENT_SOURCE_DIR}/Core/Source/system_stm32g4xx.c)

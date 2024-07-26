@@ -123,28 +123,42 @@ uint32_t isr_vector[ISR_VECTOR_SIZE_WORDS] __attribute__((section(".isr_vector")
   (uint32_t)&FMAC_IRQHandler
 };
 
-void default_handler(void)
+/**
+  * @brief This function handles System tick timer.
+  */
+void SysTick_Handler(void)
+{
+  HAL_IncTick();
+}
+
+/**
+  * @brief This is the default handler for most of the system exceptions
+  */
+void DefaultHandler(void)
 {
   while(1);
 }
 
+/**
+  * @brief This function is the entry point that gets executed on CPU reset
+  */
 void ResetHandler(void)
 {
   // Copy .data from FLASH to SRAM
-  uint32_t data_size = (uint32_t)&_edata - (uint32_t)&_sdata;
-  uint8_t *flash_data = (uint8_t*) &_etext;
-  uint8_t *sram_data = (uint8_t*) &_sdata;
+  uint32_t dataSize = (uint32_t)&_edata - (uint32_t)&_sdata;
+  uint8_t *flashData = (uint8_t*) &_sidata;
+  uint8_t *sramData = (uint8_t*) &_sdata;
 
-  for (uint32_t i = 0; i < data_size; i++)
+  for (uint32_t i = 0; i < dataSize; i++)
   {
-    sram_data[i] = flash_data[i];
+    sramData[i] = flashData[i];
   }
 
   // Zero-fill .bss section in SRAM
-  uint32_t bss_size = (uint32_t)&_ebss - (uint32_t)&_sbss;
+  uint32_t bssSize = (uint32_t)&_ebss - (uint32_t)&_sbss;
   uint8_t *bss = (uint8_t*) &_sbss;
 
-  for (uint32_t i = 0; i < bss_size; i++)
+  for (uint32_t i = 0; i < bssSize; i++)
   {
     bss[i] = 0;
   }
