@@ -163,5 +163,6 @@ void ResetHandler(void)
     bss[i] = 0;
   }
 
+  // Jump to main function
   main();
 }

@@ -15,8 +15,7 @@
                 "ms-vscode.cpptools",
                 "ms-vscode.cpptools-extension-pack",
                 "ms-vscode.cpptools-themes",
-                "ms-azuretools.vscode-docker",
-                "stmicroelectronics.stm32-vscode-extension"
+                "ms-azuretools.vscode-docker"
             ]
         }
     },
