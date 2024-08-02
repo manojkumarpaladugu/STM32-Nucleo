@@ -1,3 +1,6 @@
 [submodule "Drivers/G4/Hal"]
 	path = Drivers/G4/Hal
 	url = git@github.com:STMicroelectronics/stm32g4xx_hal_driver.git
+[submodule "Drivers/G4/CMSIS/Device"]
+	path = Drivers/G4/CMSIS/Device
+	url = git@github.com:STMicroelectronics/cmsis_device_g4.git
