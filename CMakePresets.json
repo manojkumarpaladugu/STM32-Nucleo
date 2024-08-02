@@ -13,17 +13,18 @@
             }
         },
         {
-            "name": "G491RET6",
+            "name": "G491RE",
             "inherits": "stm32-nucleo-base",
             "cacheVariables": {
-                "BOARD_DIRECTORY": "${presetName}"
+                "BOARD": "${presetName}",
+                "EXECUTABLE_NAME": "NucleoFirmware"
             }
         }
     ],
     "buildPresets": [
         {
-            "name": "G491RET6",
-            "configurePreset": "G491RET6",
+            "name": "G491RE",
+            "configurePreset": "G491RE",
             "targets": ["NucleoFirmware"]
         }
     ]
