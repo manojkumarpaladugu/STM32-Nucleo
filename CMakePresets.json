@@ -9,23 +9,22 @@
             "toolchainFile": "${sourceDir}/Build/${presetName}/Toolchain.cmake",
             "cacheVariables": {
                 "CMAKE_BUILD_TYPE": "Debug",
-                "LINKER_SCRIPT": "${sourceDir}/${presetName}/Main/Source/LinkerScript.ld"
+                "LINKER_SCRIPT": "${sourceDir}/Board/${presetName}/Startup/Source/LinkerScript.ld",
+                "EXECUTABLE_NAME": "NucleoFirmware"
             }
         },
         {
             "name": "G491RE",
             "inherits": "stm32-nucleo-base",
             "cacheVariables": {
-                "BOARD": "${presetName}",
-                "EXECUTABLE_NAME": "NucleoFirmware"
+                "BOARD_LIBRARY": "${presetName}"
             }
         }
     ],
     "buildPresets": [
         {
             "name": "G491RE",
-            "configurePreset": "G491RE",
-            "targets": ["NucleoFirmware"]
+            "configurePreset": "G491RE"
         }
     ]
 }

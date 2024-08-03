@@ -1,5 +1,10 @@
+// Includes ------------------------------------------------------------
 #include "Startup.h"
 
+// External variables ---------------------------------------------------
+extern uint32_t _sidata, _sdata, _edata, _sbss, _ebss;
+
+// Private variables ---------------------------------------------------
 uint32_t isr_vector[ISR_VECTOR_SIZE_WORDS] __attribute__((section(".isr_vector"))) = {
   STACK_ADDRESS,
   // Cortex-M system exceptions
@@ -123,8 +128,14 @@ uint32_t isr_vector[ISR_VECTOR_SIZE_WORDS] __attribute__((section(".isr_vector")
   (uint32_t)&FMAC_IRQHandler
 };
 
+// External functions prototypes ----------------------------------------
+extern void main(void);
+
+// Private functions ----------------------------------------------------
 /**
-  * @brief This function handles System tick timer.
+  * @brief This function handles System tick timer
+  * @param None
+  * @retval None
   */
 void SysTick_Handler(void)
 {
@@ -133,6 +144,8 @@ void SysTick_Handler(void)
 
 /**
   * @brief This is the default handler for most of the system exceptions
+  * @param None
+  * @retval None
   */
 void DefaultHandler(void)
 {
@@ -141,6 +154,8 @@ void DefaultHandler(void)
 
 /**
   * @brief This function is the entry point that gets executed on CPU reset
+  * @param None
+  * @retval None
   */
 void ResetHandler(void)
 {
@@ -162,6 +177,8 @@ void ResetHandler(void)
   {
     bss[i] = 0;
   }
+
+  SystemInit();
 
   // Jump to main function
   main();

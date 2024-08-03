@@ -34,7 +34,7 @@
 
 * Run setup script: `./setup.sh`
 
-* Build firmware for G491RET6: `./mk.sh G491RET6 -t NucleoFirmware`
+* Build firmware for G491RET6: `./mk.sh G491RE`
 
 ## Debugging via VS Code
 
