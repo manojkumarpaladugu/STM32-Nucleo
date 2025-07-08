@@ -41,7 +41,7 @@ set(CMAKE_CXX_FLAGS                 "${CMAKE_C_FLAGS} -fno-rtti -fno-exceptions 
 set(CMAKE_C_LINK_FLAGS              "${TARGET_FLAGS}")
 set(CMAKE_C_LINK_FLAGS              "${CMAKE_C_LINK_FLAGS} -T ${LINKER_SCRIPT}")
 set(CMAKE_C_LINK_FLAGS              "${CMAKE_C_LINK_FLAGS} --specs=nano.specs")
-set(CMAKE_C_LINK_FLAGS              "${CMAKE_C_LINK_FLAGS} -Wl,-Map=${EXECUTABLE_NAME}.map -Wl,--gc-sections")
+set(CMAKE_C_LINK_FLAGS              "${CMAKE_C_LINK_FLAGS} -Wl,-Map=${APPLICATION_NAME}.map -Wl,--gc-sections")
 set(CMAKE_C_LINK_FLAGS              "${CMAKE_C_LINK_FLAGS} -Wl,--start-group -lc -lm -Wl,--end-group")
 set(CMAKE_C_LINK_FLAGS              "${CMAKE_C_LINK_FLAGS} -Wl,--print-memory-usage -Wl,--no-warn-rwx-segment")
 

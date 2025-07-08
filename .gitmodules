@@ -4,3 +4,6 @@
 [submodule "Drivers/G4/CMSIS/Device"]
 	path = Drivers/G4/CMSIS/Device
 	url = git@github.com:STMicroelectronics/cmsis_device_g4.git
+[submodule "Modules/Commons"]
+	path = Modules/Commons
+	url = git@github.com:manojkumarpaladugu/Commons.git

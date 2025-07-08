@@ -10,7 +10,7 @@
             "cacheVariables": {
                 "CMAKE_BUILD_TYPE": "Debug",
                 "LINKER_SCRIPT": "${sourceDir}/Board/${presetName}/Startup/Source/LinkerScript.ld",
-                "EXECUTABLE_NAME": "NucleoFirmware"
+                "APPLICATION_NAME": "NucleoFirmware"
             }
         },
         {

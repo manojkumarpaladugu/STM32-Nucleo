@@ -12,9 +12,12 @@ project(STM32-NUCLEO)
 
 enable_language(C CXX ASM)
 
-add_executable(${EXECUTABLE_NAME})
+add_executable(${APPLICATION_NAME})
 
+set(THIRD_PARTY_DIR "${CMAKE_CURRENT_SOURCE_DIR}/ThirdParty")
+
+add_subdirectory(Modules)
 add_subdirectory(Board)
 add_subdirectory(Application)
 
-target_link_libraries(${EXECUTABLE_NAME} PRIVATE ${BOARD_LIBRARY} PRIVATE Drivers)
+target_link_libraries(${APPLICATION_NAME} PRIVATE Commons ${BOARD_LIBRARY} PRIVATE Drivers)
