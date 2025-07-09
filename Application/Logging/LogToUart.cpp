@@ -15,8 +15,26 @@
 // Public functions
 // ----------------------------------------------------------------------------
 
-void LogToUart::ProcessLogMessage(const uint8_t* message, size_t length)
+void LogToUart::Initialize()
 {
-    // Output the log message to standard output (UART in this case)
-    System_UartPrint(message, length);
+
+}
+
+void LogToUart::ProcessLogMessage(const uint8_t* pMessage, size_t length)
+{
+    const uint8_t* pLogMessage = pMessage;
+    size_t messageLength = length;
+
+#if CONFIG_LIB_COMMONS_TOKENIZED_LOGGING
+    size_t base64MessageLength = 0;
+    const char* pBase64Message = ConvertToBase64(pLogMessage, messageLength, base64MessageLength);
+    if( pBase64Message != nullptr)
+    {
+        pLogMessage = reinterpret_cast<const uint8_t*>(pBase64Message);
+        messageLength = base64MessageLength;
+    }
+#endif
+
+    // Output the log message to UART
+    System_UartPrint(pLogMessage, messageLength);
 }

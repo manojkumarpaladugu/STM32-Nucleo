@@ -11,21 +11,34 @@
 // ----------------------------------------------------------------------------
 
 #include "LogConsumerId.h"
-#include "IConsumer.hpp"
+#if CONFIG_LIB_COMMONS_TOKENIZED_LOGGING
+    #include "TokenizedLogToOutput.hpp"
+#else
+    #include "LogToOutput.hpp"
+#endif
 
 // ----------------------------------------------------------------------------
 // Class definition
 // ----------------------------------------------------------------------------
 
-class LogToUart final : public IConsumer
+#if CONFIG_LIB_COMMONS_TOKENIZED_LOGGING
+class LogToUart final : public TokenizedLogToOutput
+#else
+class LogToUart final : public LogToOutput
+#endif
 {
 public:
 
     /**
+     * @brief Initialize the log consumer for UART output.
+     */
+    void Initialize() override;
+
+    /**
      * @brief Process a log message and output it to UART
      *
-     * @param[in] message Pointer to the log message.
+     * @param[in] pMessage Pointer to the log message.
      * @param[in] length Length of the log message.
      */
-    void ProcessLogMessage(const uint8_t* message, size_t length) override;
+    void ProcessLogMessage(const uint8_t* pMessage, size_t length) override;
 };
