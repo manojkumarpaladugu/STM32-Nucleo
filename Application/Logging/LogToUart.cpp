@@ -25,7 +25,7 @@ void LogToUart::ProcessLogMessage(const uint8_t* pMessage, size_t length)
     const uint8_t* pLogMessage = pMessage;
     size_t messageLength = length;
 
-#if CONFIG_LIB_COMMONS_TOKENIZED_LOGGING
+#if CONFIG_LIB_COMMONS_LOGGING_BASE64_ENCODING
     size_t base64MessageLength = 0;
     const char* pBase64Message = ConvertToBase64(pLogMessage, messageLength, base64MessageLength);
     if( pBase64Message != nullptr)

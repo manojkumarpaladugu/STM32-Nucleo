@@ -8,11 +8,8 @@
 // Header includes
 // ----------------------------------------------------------------------------
 
-#define LOG_MODULE_NAME "main"
-#define MODULE_LOG_LEVEL LOG_LEVEL_DEBUG
-#define LOG_LINE_ENDING "\n\r"
+#define LOG_FORMAT(level, module, file, line, message) level " " module "|" file ":" line " - " message "\n\r"
 
-// Must be included after the log level and module name definitions
 #include "Logging.h"
 #include "Assert.h"
 #include "CommonTypes.h"

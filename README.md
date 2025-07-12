@@ -46,10 +46,12 @@ Note: Debugging via VS Code is not tried on Linux and Dev Container as of now.
 
 ## Flash Firmware
 
-`FIRMWARE_ELF=_out/G491RE/NucleoFirmware.elf`
-`INTERFACE=interface/stlink-v2.cfg`
-`TARGET=target/stm32g4x.cfg`
-`openocd -f $INTERFACE -f $TARGET -c "program $FIRMWARE_ELF verify reset exit"`
+```bash
+INTERFACE=interface/stlink-v2.cfg
+TARGET=target/stm32g4x.cfg
+FIRMWARE_ELF=_out/G491RE/NucleoFirmware.elf
+openocd -f $INTERFACE -f $TARGET -c "program $FIRMWARE_ELF verify reset exit"
+```
 
 ## UART Output
 

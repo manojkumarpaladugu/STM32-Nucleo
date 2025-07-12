@@ -11,21 +11,13 @@
 // ----------------------------------------------------------------------------
 
 #include "LogConsumerId.h"
-#if CONFIG_LIB_COMMONS_TOKENIZED_LOGGING
-    #include "TokenizedLogToOutput.hpp"
-#else
-    #include "LogToOutput.hpp"
-#endif
+#include "LogToOutput.hpp"
 
 // ----------------------------------------------------------------------------
 // Class definition
 // ----------------------------------------------------------------------------
 
-#if CONFIG_LIB_COMMONS_TOKENIZED_LOGGING
-class LogToUart final : public TokenizedLogToOutput
-#else
 class LogToUart final : public LogToOutput
-#endif
 {
 public:
 
