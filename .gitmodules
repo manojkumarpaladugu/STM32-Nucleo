@@ -7,3 +7,6 @@
 [submodule "Modules/Commons"]
 	path = Modules/Commons
 	url = git@github.com:manojkumarpaladugu/Commons.git
+[submodule ".vscode"]
+	path = .vscode
+	url = git@github.com:manojkumarpaladugu/vscode-debug-config.git
